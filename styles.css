@@ -1,6 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
-    padding: 1%;
+    /* Page */
+    padding: 0;
+    margin: 0;
     background-color: #373940;
+
+    /* Text */
     color: #dddddd;
     font-family: Bahnschrift;
+}
+
+
+/* CLASSES */
+
+.main{
+    margin-left: 2%;
+}
+
+.column{
+    display: inline-block;
+    /* margin-left: auto;
+    margin-right: auto;
+    width: auto; */
+}
+
+
+/* IDS */
+#navbar{
+    background-color: #17181a;
+    padding: 2%;
 }
