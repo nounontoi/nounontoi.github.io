@@ -1,4 +1,4 @@
-*{
+:root{
     box-sizing: border-box;
 }
 
@@ -10,7 +10,7 @@ body {
 
     /* Text */
     color: #dddddd;
-    font-family: Bahnschrift;
+    font-family: /*JetBrains Mono, Bahnschrift,*/ Arial;
 }
 
 
@@ -27,9 +27,22 @@ body {
     width: auto; */
 }
 
+.logo{
+    height: 50px;
+    width:auto;
+    margin: 10px
+}
+
+.title{
+    text-decoration: none;
+    font-size: xx-large;
+    color: #dddddd;
+}
+
 
 /* IDS */
 #navbar{
-    background-color: #3a3c41;
+    background-color: #26272a;
     padding: 2%;
+    margin-top: 0;
 }
