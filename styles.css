@@ -1,6 +1,6 @@
-body{
-
+body {
+    background-color: #373940;
 }
-p{
-    
+p, h1, h2, h3, h4, a{
+    color: #dddddd;
 }
