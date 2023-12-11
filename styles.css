@@ -53,16 +53,16 @@ a{
 
     text-align: center;
 
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
 
-    border: 2px solid #00000000;
-    border-radius: 10px;
+    /* border: 2px solid #00000000; */
+    border-radius: 20px;
   }
 
 [class*="col-"]:hover {
-    border: 2px solid #bbbbbb;
-    background-color: rgba(100, 100, 100, 0.4);
-    font-size: larger;
+    /* border: 2px solid #bbbbbb; */
+    background-color: rgba(100, 100, 100, 0.6);
+    /* font-size: larger; */
 }
 
 .logo{
