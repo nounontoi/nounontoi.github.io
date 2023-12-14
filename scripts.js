@@ -15,9 +15,22 @@ function startTime() {
     return i;
   }
 
+
+// Fullscreen
 var element = document.documentElement;
 function openFullscreen() {
     if (element.requestFullscreen) {
         element.requestFullscreen()
     }
 }
+
+
+var output = document.getElementById("navbar");
+document.addEventListener("fullscreenchange", function() {
+  if (document.fullscreenElement) {
+    output.style.display = "none";
+  }
+  else {
+    output.style.display = "block";
+  }
+})
