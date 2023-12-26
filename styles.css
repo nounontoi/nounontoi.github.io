@@ -95,7 +95,7 @@
 #time {
     font-size: 30vw;
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
+    user-select: none;
 
     top: 50%;
     left: 50%;
