@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 /* CLASSES */
 
 .main {
@@ -92,6 +94,7 @@
 
 #time {
     font-size: 30vw;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
 
     top: 50%;
