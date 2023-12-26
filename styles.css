@@ -82,19 +82,10 @@
     padding-top: 30px;
 }
 
-
-/* IDS */
-#navbar {
-    background-color: #26272a;
-    padding: 2%;
-    margin-top: 0;
-    margin-bottom: 40px;
-    position: relative;
-}
-
-#time {
-    font-size: 30vw;
+.time {
+    font-size: 30vmin;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
     user-select: none;
 
     top: 50%;
@@ -103,6 +94,16 @@
     position: absolute;
 
     cursor: none;
+}
+
+
+/* IDS */
+#navbar {
+    background-color: #26272a;
+    padding: 2%;
+    margin-top: 0;
+    margin-bottom: 40px;
+    position: relative;
 }
 
 

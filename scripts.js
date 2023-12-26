@@ -6,7 +6,7 @@ function startTime() {
     // let s = today.getSeconds();
     m = checkTime(m);
     // s = checkTime(s);
-    document.getElementById('time').innerHTML =  h + ":" + m;
+    document.getElementById('clock').innerHTML =  h + ":" + m;
     setTimeout(startTime, 1000);
   }
   
@@ -15,18 +15,29 @@ function startTime() {
     return i;
   }
 
-
-// Fullscreen
-var element = document.documentElement;
-function openFullscreen() {
-    if (element.requestFullscreen) {
-        element.requestFullscreen()
-    }
+// TIMER
+function timerDecrement() {
+  var time1 = document.getElementById('timer').innerHTML;
+  if (time1 != 1) {
+    time1--;
+    document.getElementById('timer').innerHTML = time1;
+    setTimeout(timerDecrement, 1000);
+  }
+  else {
+    document.getElementById('timer').innerHTML = "Timer done."
+  }
 }
 
+// FULLSCREEN
+function openFullscreen() {
+  var element = document.documentElement;
+  if (element.requestFullscreen) {
+        element.requestFullscreen()
+  }
+}
 
-var output = document.getElementById("navbar");
 document.addEventListener("fullscreenchange", function() {
+  var output = document.getElementById("navbar");
   if (document.fullscreenElement) {
     output.style.display = "none";
   }
