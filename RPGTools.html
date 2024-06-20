@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="newStyles.css">
+    <script defer src="newScripts.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-3">
+            <h1>Dice</h1>
+            <div class="bordered">
+                <p>Count</p>
+                <input type="number" id="rollCount" class="rollCountInput" max="99" value="1">
+                <!-- <button>-</button>
+                <button>+</button>
+                <br>
+                <input type="range" min="1" max="99" value="1"> -->
+            </div>
+            <!-- <input type="range" min="1" max="99" value="1"> -->
+            <br><br>
+            <button onclick="RollDice(4)">d4</button>
+            <button onclick="RollDice(6)">d6</button>
+            <button onclick="RollDice(8)">d8</button>
+            <button onclick="RollDice(10)">d10</button>
+            <button onclick="RollDice(12)">d12</button>
+            <button onclick="RollDice(20)">d20</button>
+            <button onclick="RollDice(100)">d100</button>
+        </div>
+        <div class="col-2">
+            <h1>Quick rolls</h1>
+            <button onclick="RollInitiative()">Initiative</button>
+        </div>
+        <div class="col-2" style="float: right">
+            <h1>Roll history</h1>
+            <div id="rollHistory"></div>
+        </div>
+        <div class="col-2" style="float: right">
+            <h1>Dice roll results</h1>
+            <div id="rollResults"></div>
+        </div>
+    </div>
+</body>
+
+</html>
