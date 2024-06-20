@@ -17,7 +17,9 @@ function RollDice(sides) {
 
 function RollInitiative() {
     roll = randomInt(1, 21)
-    document.getElementById("rollResults").innerHTML = "Rolled initiative" + "<br><br>" + roll + "<br><br>";
+    modifier = document.getElementById("initiativeModifier").value;
+    total = roll + modifier;
+    document.getElementById("rollResults").innerHTML = "Rolled initiative" + "<br><br>" + total + "<br><br>";
     return rollResults;
 }
 

@@ -65,8 +65,8 @@
     font-size: larger;
 } */
 
-.rollCountInput {
-    width: 15%;
+.numInput {
+    width: 50px;
     height: 30px;
     background-color: #cccccc;
 }
@@ -109,6 +109,8 @@ p {
 
 button {
     height: 30px;
+    margin: 5px;
 
+    color: black;
     background-color: #cccccc;
 }

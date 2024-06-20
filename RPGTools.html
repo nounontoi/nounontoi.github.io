@@ -14,7 +14,7 @@
             <h1>Dice</h1>
             <div class="bordered">
                 <p>Count</p>
-                <input type="number" id="rollCount" class="rollCountInput" max="99" value="1">
+                <input type="number" id="rollCount" class="numInput" max="99" value="1">
                 <!-- <button>-</button>
                 <button>+</button>
                 <br>
@@ -33,6 +33,9 @@
         <div class="col-2">
             <h1>Quick rolls</h1>
             <button onclick="RollInitiative()">Initiative</button>
+            <br>
+            <p>Modifier</p>
+            <input type="number" id="initiativeModifier" class="numInput">
         </div>
         <div class="col-2" style="float: right">
             <h1>Roll history</h1>
