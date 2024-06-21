@@ -77,6 +77,10 @@
     padding: 4%;
 }
 
+.incrementButton {
+    width: 30px;
+}
+
 
 /* Other */
 * {

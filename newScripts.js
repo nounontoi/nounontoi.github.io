@@ -18,9 +18,19 @@ function RollDice(sides) {
 function RollInitiative() {
     roll = randomInt(1, 21)
     modifier = document.getElementById("initiativeModifier").value;
-    total = roll + modifier;
-    document.getElementById("rollResults").innerHTML = "Rolled initiative" + "<br><br>" + total + "<br><br>";
+    total = Number(roll) + Number(modifier);
+    document.getElementById("rollResults").innerHTML = "Rolled initiative" + "<br><br>" + "Modifier: " + modifier + "<br><br>" + roll + " + " + modifier + "<br><br>" + total + "<br><br>";
     return rollResults;
+}
+
+function IncrementRollCount(value) {
+    a = document.getElementById("rollCount").value;
+    document.getElementById("rollCount").value = Number(a) + value;
+}
+
+function IncrementInitiative(value) {
+    a = document.getElementById("initiativeModifier").value;
+    document.getElementById("initiativeModifier").value = Number(a) + value;
 }
 
 function AddHistory(rolls, sum) {
