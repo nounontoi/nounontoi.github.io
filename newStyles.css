@@ -25,6 +25,11 @@
     display: inline-block;
 }
 
+#rollHistory {
+    overflow-y: auto;
+    height: 80vh;
+}
+
 
 /* Classes */
 .row::after {
@@ -33,31 +38,27 @@
     display: table;
 }
 
-.col-1 {width: 7.33%;}
-.col-2 {width: 15.66%;}
-.col-3 {width: 24%;}
-.col-4 {width: 32.33%;}
-.col-5 {width: 40.66%;}
-.col-6 {width: 49%;}
-.col-7 {width: 57.33%;}
-.col-8 {width: 65.66%;}
-.col-9 {width: 74%;}
-.col-10 {width: 82.33%;}
-.col-11 {width: 90.66%;}
-.col-12 {width: 99%;}
-
 [class*="col-"] {
+    width: 100%;
     float: left;
     padding: 2%;
-    /* margin: 0.5%; */
-
     text-align: center;
+}
 
-    transition-duration: 0.2s;
-
-    border: 2px solid #0055aa;
-    border-radius: 20px;
-  }
+@media only screen and (min-width: 1350px) {
+    .col-1 {width: 7.33%;}
+    .col-2 {width: 15.66%;}
+    .col-3 {width: 24%;}
+    .col-4 {width: 32.33%;}
+    .col-5 {width: 40.66%;}
+    .col-6 {width: 49%;}
+    .col-7 {width: 57.33%;}
+    .col-8 {width: 65.66%;}
+    .col-9 {width: 74%;}
+    .col-10 {width: 82.33%;}
+    .col-11 {width: 90.66%;}
+    .col-12 {width: 99%;}
+}
 
 /* [class*="col-"]:hover {
     border: 2px solid #bbbbbb;
@@ -69,6 +70,7 @@
     width: 50px;
     height: 30px;
     background-color: #cccccc;
+    border-radius: 10px;
 }
 
 .bordered {
@@ -79,6 +81,12 @@
 
 .incrementButton {
     width: 30px;
+    color: white;
+}
+
+.border {
+    border: 2px solid #0055aa;
+    border-radius: 20px;
 }
 
 
@@ -114,6 +122,8 @@ p {
 button {
     height: 30px;
     margin: 5px;
+
+    border-radius: 10px;
 
     color: black;
     background-color: #cccccc;

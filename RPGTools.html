@@ -15,12 +15,12 @@
             <div class="bordered">
                 <p>Count</p>
                 <input type="number" id="rollCount" class="numInput" max="99" value="1">
-                <button class="incrementButton" onclick="IncrementRollCount(-1)">-</button>
-                <button class="incrementButton" onclick="IncrementRollCount(1)">+</button>
+                <button class="incrementButton" onclick="IncrementRollCount(-1)"
+                    style="background-color: #880000;">-</button>
+                <button class="incrementButton" onclick="IncrementRollCount(1)"
+                    style="background-color: #008800;">+</button>
                 <br>
-                <!-- <input type="range" min="1" max="99" value="1"> -->
             </div>
-            <!-- <input type="range" min="1" max="99" value="1"> -->
             <br><br>
             <button onclick="RollDice(4)">d4</button>
             <button onclick="RollDice(6)">d6</button>
@@ -32,20 +32,24 @@
         </div>
         <div class="col-2">
             <h1>Quick rolls</h1>
-            <button onclick="RollInitiative()">Initiative</button>
-            <br>
-            <p>Modifier</p>
-            <input type="number" id="initiativeModifier" class="numInput" value="0">
-            <button class="incrementButton" onclick="IncrementInitiative(-1)">-</button>
-            <button class="incrementButton" onclick="IncrementInitiative(1)">+</button>
+            <div class="bordered">
+                <button onclick="RollInitiative()">Initiative</button>
+                <br>
+                <p>Modifier</p>
+                <input type="number" id="initiativeModifier" class="numInput" value="0">
+                <button class="incrementButton" onclick="IncrementInitiative(-1)"
+                    style="background-color: #880000;">-</button>
+                <button class="incrementButton" onclick="IncrementInitiative(1)"
+                    style="background-color: #008800;">+</button>
+            </div>
         </div>
-        <div class="col-2" style="float: right">
-            <h1>Roll history</h1>
-            <div id="rollHistory"></div>
-        </div>
-        <div class="col-2" style="float: right">
+        <div class="col-2">
             <h1>Dice roll results</h1>
             <div id="rollResults"></div>
+        </div>
+        <div class="col-2 border" style="float: right">
+            <h1>Roll history</h1>
+            <div id="rollHistory"></div>
         </div>
     </div>
 </body>
