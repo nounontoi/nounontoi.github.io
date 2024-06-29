@@ -9,45 +9,53 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-3">
+    <a href="index.html" class="topButton">Home</a>
+    <div class="row" style="user-select: none;">
+        <div class="col-3 col-s-2">
             <h1>Dice</h1>
             <div class="bordered">
-                <p>Count</p>
-                <input type="number" id="rollCount" class="numInput" max="99" value="1">
-                <button class="incrementButton" onclick="IncrementRollCount(-1)"
-                    style="background-color: #880000;">-</button>
-                <button class="incrementButton" onclick="IncrementRollCount(1)"
-                    style="background-color: #008800;">+</button>
+                <div>
+                    <p>Count</p>
+                    <input type="number" id="rollCount" class="numInput" min="1" max="99" value="1">
+                    <button class="incrementButton red" onclick="IncrementRollCount(-1), ValidateCount()">-</button>
+                    <button class="incrementButton green" onclick="IncrementRollCount(1), ValidateCount()">+</button>
+                </div>
                 <br>
+                <div>
+                    <p>Modifier</p>
+                    <input type="number" id="modifier" class="numInput" max="99" value="0">
+                    <button class="incrementButton red" onclick="IncrementModifier(-1)">-</button>
+                    <button class="incrementButton green" onclick="IncrementModifier(1)">+</button>
+                </div>
             </div>
             <br><br>
-            <button onclick="RollDice(4)">d4</button>
-            <button onclick="RollDice(6)">d6</button>
-            <button onclick="RollDice(8)">d8</button>
-            <button onclick="RollDice(10)">d10</button>
-            <button onclick="RollDice(12)">d12</button>
-            <button onclick="RollDice(20)">d20</button>
-            <button onclick="RollDice(100)">d100</button>
+            <div>
+                <button onclick="RollDice(2)">d2</button>
+                <button onclick="RollDice(4)">d4</button>
+                <button onclick="RollDice(6)">d6</button>
+                <button onclick="RollDice(8)">d8</button>
+                <button onclick="RollDice(10)">d10</button>
+                <button onclick="RollDice(12)">d12</button>
+                <button onclick="RollDice(20)">d20</button>
+                <button onclick="RollDice(100)">d100</button>
+            </div>
         </div>
-        <div class="col-2">
+        <div class="col-3 col-s-2">
             <h1>Quick rolls</h1>
             <div class="bordered">
                 <button onclick="RollInitiative()">Initiative</button>
                 <br>
                 <p>Modifier</p>
                 <input type="number" id="initiativeModifier" class="numInput" value="0">
-                <button class="incrementButton" onclick="IncrementInitiative(-1)"
-                    style="background-color: #880000;">-</button>
-                <button class="incrementButton" onclick="IncrementInitiative(1)"
-                    style="background-color: #008800;">+</button>
+                <button class="incrementButton red" onclick="IncrementInitiative(-1)">-</button>
+                <button class="incrementButton green" onclick="IncrementInitiative(1)">+</button>
             </div>
         </div>
-        <div class="col-2">
+        <div class="col-3 col-s-2">
             <h1>Dice roll results</h1>
             <div id="rollResults"></div>
         </div>
-        <div class="col-2 border" style="float: right">
+        <div class="col-3 col-s-2 borderedCol" style="float: right">
             <h1>Roll history</h1>
             <div id="rollHistory"></div>
         </div>

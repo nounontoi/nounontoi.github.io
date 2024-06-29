@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 /* IDs */
 #topBar {
     background-color: aliceblue;
@@ -19,10 +20,10 @@
 }
 
 #mainContent {
-    margin-top: 20px;
-    margin-left: 18vmax;
-    /* width: 75vmax; */
+    text-align: center;
     display: inline-block;
+    width: 100vw;
+    height: 100vh;
 }
 
 #rollHistory {
@@ -32,6 +33,31 @@
 
 
 /* Classes */
+.title {
+    margin: 250px 0 100px 20vmin;
+    font-size: 6vmin;
+}
+
+.menuItem {
+    position: relative;
+    font-size: 2vmax;
+    font-weight: bold;
+    color: #1b1b1b;
+    display: block;
+    margin: 3%;
+    padding: 8%;
+
+    background-color: #dddde8;
+    border-radius: 10px;
+    height: 500px;
+
+    transition-duration: 0.2s;
+}
+
+.menuItem:hover {
+    font-size: 2.5vmax;
+}
+
 .row::after {
     content: "";
     clear: both;
@@ -41,40 +67,109 @@
 [class*="col-"] {
     width: 100%;
     float: left;
-    padding: 2%;
+    padding: 2vmin;
     text-align: center;
 }
 
-@media only screen and (min-width: 1350px) {
-    .col-1 {width: 7.33%;}
-    .col-2 {width: 15.66%;}
-    .col-3 {width: 24%;}
-    .col-4 {width: 32.33%;}
-    .col-5 {width: 40.66%;}
-    .col-6 {width: 49%;}
-    .col-7 {width: 57.33%;}
-    .col-8 {width: 65.66%;}
-    .col-9 {width: 74%;}
-    .col-10 {width: 82.33%;}
-    .col-11 {width: 90.66%;}
-    .col-12 {width: 99%;}
+@media only screen and (min-width: 800px) {
+    .col-s-1 {
+        width: 12.25%;
+    }
+
+    .col-s-2 {
+        width: 25%;
+    }
+
+    .col-s-3 {
+        width: 37.75%;
+    }
+
+    .col-s-4 {
+        width: 50%;
+    }
+
+    .col-s-5 {
+        width: 62.25%;
+    }
+
+    .col-s-6 {
+        width: 75%;
+    }
+
+    .col-s-7 {
+        width: 87.75%;
+    }
+
+    .col-s-8 {
+        width: 100%;
+    }
 }
 
-/* [class*="col-"]:hover {
-    border: 2px solid #bbbbbb;
-    background-color: rgba(100, 100, 100, 0.5);
-    font-size: larger;
-} */
+@media only screen and (min-width: 1350px) {
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
 
 .numInput {
     width: 50px;
     height: 30px;
     background-color: #cccccc;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+
+.borderedCol {
+    border: 2px solid #aaaaaa7f;
+    border-radius: 20px;
+    height: 80%;
 }
 
 .bordered {
-    border: 2px dashed #555555dd;
+    border: 2px solid #5555557f;
     border-radius: 20px;
     padding: 4%;
 }
@@ -84,9 +179,30 @@
     color: white;
 }
 
-.border {
-    border: 2px solid #0055aa;
-    border-radius: 20px;
+.red {
+    background-color: #880000;
+}
+
+.red:hover {
+    background-color: #aa0000;
+}
+
+.green {
+    background-color: #008800;
+}
+
+.green:hover {
+    background-color: #00aa00;
+}
+
+.historyElements {
+    margin: 20px 0px 20px 0px;
+}
+
+.topButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 
@@ -103,7 +219,7 @@ body {
     /* Page */
     padding: 0px;
     margin: 0;
-    background-color: #373940;
+    background-color: #1b1b1b;
 
     /* Text */
     color: #dddddd;
@@ -112,7 +228,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #232323;
+    color: inherit;
 }
 
 p {
@@ -127,4 +243,36 @@ button {
 
     color: black;
     background-color: #cccccc;
+
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+
+/* More other */
+::-webkit-scrollbar {
+    width: 7px;
+    transition-duration: 0.2s;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px #000000;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #999999;
+    /* background-image: linear-gradient(#787878, #575757); */
+    /* box-shadow: inset 0 0 5px #666666; */
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #bbbbbb;
 }
