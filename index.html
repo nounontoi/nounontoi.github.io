@@ -6,21 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="newStyles.css">
     <script defer src="newScripts.js"></script>
+    <title>Home - nounontoi</title>
 </head>
 
 <body>
-    <div class="row title">
-        <h1>nounontoi</h1>
+    <h1 id="title">a website</h1>
+    <div>
+        <h1>About this page</h1>
+        <p>This is a website that I'm planning to use to host a number of things. I'm still expanding on this, but I'm getting there.
+            <br>
+            The key feature is currently the RPGTools page, which I decided to make because I wanted a customisable dice roller.
+        </p>
+        <!-- <button onclick="ChangeTheme()">Change theme</button> -->
     </div>
-    <div class="row">
-        <div class="col-4 col-s-8">
-            <a class="menuItem" href="RPGTools.html">RPG Tools</a>
+    <div class="container">
+        <div class="containerItem">
+            <a href="RPGTools.html" class="shadowButton menuItem">
+                <span>RPG Tools</span>
+                <img src="Images/d20.png" class="icon" style="filter: invert(1);">
+            </a>
         </div>
-        <div class="col-4 col-s-8">
-            <a class="menuItem">Menu 2</a>
+        <div class="containerItem">
+            <a href="aboutMe.html" class="shadowButton menuItem">
+                <span>About Me</span>
+                <img src="Images/rcube.webp" class="icon" style="filter: brightness(0) invert(1);">
+            </a>
         </div>
-        <div class="col-4 col-s-8">
-            <a class="menuItem">Menu 3</a>
+        <div class="containerItem">
+            <a href="sources.html" class="shadowButton menuItem">
+                <span>Sources</span>
+                <img src="Images/youtube.png" class="icon" style="filter: invert(1);">
+            </a>
         </div>
     </div>
 </body>

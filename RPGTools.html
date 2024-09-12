@@ -6,57 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="newStyles.css">
     <script defer src="newScripts.js"></script>
+    <title>RPG Tools - nounontoi</title>
 </head>
 
-<body>
+<body style="user-select: none;">
     <a href="index.html" class="topButton">Home</a>
-    <div class="row" style="user-select: none;">
-        <div class="col-3 col-s-2">
+    <img src="Images/dnd.jpg" class="backgroundImage">
+    <input type="checkbox" style="left: 70px" checked="true" id="imageToggle" class="topButton" onclick="ToggleImage()"><span style="position: absolute; top: 10px; left: 90px">Image</span>
+    <div class="container">
+        <div class="col">
             <h1>Dice</h1>
-            <div class="bordered">
+            <div class="glass bordered">
                 <div>
                     <p>Count</p>
                     <input type="number" id="rollCount" class="numInput" min="1" max="99" value="1">
-                    <button class="incrementButton red" onclick="IncrementRollCount(-1), ValidateCount()">-</button>
-                    <button class="incrementButton green" onclick="IncrementRollCount(1), ValidateCount()">+</button>
+                    <div>
+                        <button class="incrementButton" onclick="IncrementRollCount(-1), ValidateCount()"><span
+                                class="red button_top">-</span>
+                        </button>
+                        <button class="incrementButton" onclick="IncrementRollCount(1), ValidateCount()"><span
+                                class="green button_top">+</span>
+                        </button>
+                    </div>
                 </div>
-                <br>
                 <div>
                     <p>Modifier</p>
                     <input type="number" id="modifier" class="numInput" max="99" value="0">
-                    <button class="incrementButton red" onclick="IncrementModifier(-1)">-</button>
-                    <button class="incrementButton green" onclick="IncrementModifier(1)">+</button>
+                    <div>
+                        <button class="incrementButton" onclick="IncrementModifier(-1)"><span
+                                class="red button_top">-</span>
+                        </button>
+                        <button class="incrementButton" onclick="IncrementModifier(1)"><span
+                                class="green button_top">+</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <br><br>
             <div>
-                <button onclick="RollDice(2)">d2</button>
-                <button onclick="RollDice(4)">d4</button>
-                <button onclick="RollDice(6)">d6</button>
-                <button onclick="RollDice(8)">d8</button>
-                <button onclick="RollDice(10)">d10</button>
-                <button onclick="RollDice(12)">d12</button>
-                <button onclick="RollDice(20)">d20</button>
-                <button onclick="RollDice(100)">d100</button>
+                <button onclick="RollDice(2)"><span class="button_top">d2</span></button>
+                <button onclick="RollDice(3)"><span class="button_top">d3</span></button>
+                <button onclick="RollDice(4)"><span class="button_top">d4</span></button>
+                <button onclick="RollDice(6)"><span class="button_top">d6</span></button>
+                <button onclick="RollDice(8)"><span class="button_top">d8</span></button>
+                <button onclick="RollDice(10)"><span class="button_top">d10</span></button>
+                <button onclick="RollDice(12)"><span class="button_top">d12</span></button>
+                <button onclick="RollDice(20)"><span class="button_top">d20</span></button>
+                <button onclick="RollDice(100)"><span class="button_top">d100</span></button>
             </div>
         </div>
-        <div class="col-3 col-s-2">
+        <div class="col" style="flex-basis: 15%;">
             <h1>Quick rolls</h1>
-            <div class="bordered">
-                <button onclick="RollInitiative()">Initiative</button>
-                <br>
+            <div class="glass bordered">
+                <button onclick="RollInitiative()"><span class="button_top">Initiative</span></button>
                 <p>Modifier</p>
                 <input type="number" id="initiativeModifier" class="numInput" value="0">
-                <button class="incrementButton red" onclick="IncrementInitiative(-1)">-</button>
-                <button class="incrementButton green" onclick="IncrementInitiative(1)">+</button>
+                <div>
+                    <button class="incrementButton" onclick="IncrementInitiative(-1)"><span
+                            class="red button_top">-</span>
+                    </button>
+                    <button class="incrementButton" onclick="IncrementInitiative(1)"><span
+                            class="green button_top">+</span>
+                    </button>
+                </div>
             </div>
         </div>
-        <div class="col-3 col-s-2">
+        <div class="col">
             <h1>Dice roll results</h1>
             <div id="rollResults"></div>
         </div>
-        <div class="col-3 col-s-2 borderedCol" style="float: right">
+        <div class="col" style="max-width: 8vw;">
             <h1>Roll history</h1>
+            <button onclick="ClearHistory()"><span class="button_top">Clear</span></button>
             <div id="rollHistory"></div>
         </div>
     </div>
