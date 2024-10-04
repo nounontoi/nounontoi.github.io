@@ -4,41 +4,52 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="newStyles.css">
-    <script defer src="newScripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
     <title>RPG Tools - nounontoi</title>
 </head>
 
-<body style="user-select: none;">
-    <a href="index.html" class="topButton">Home</a>
-    <img src="Images/dnd.jpg" class="backgroundImage">
-    <input type="checkbox" style="left: 70px" checked="true" id="imageToggle" class="topButton" onclick="ToggleImage()"><span style="position: absolute; top: 10px; left: 90px">Image</span>
+<body style="user-select: none">
+    <span class="sideBarToggle" onclick="ToggleSideBar()">☰</span>
+    <div id="sideBar">
+        <a class="sideBarContent container" href="index.html">
+            <svg class="sideBarIcon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                <path
+                    d="m95.801 50.301-42.102-45.102c-1.8008-2.3984-5.3008-2.3984-7.1016 0l-42.797 46.301c-3 3.5-0.60156 9.5 4.1992 9.5h9.5v32c0 1.1992 1.1992 3.6016 3.6016 3.6016h15.398c1.8008 0 3.6016-1.8008 3.6016-3.6016v-17.199c0-1.8008 1.1992-3 3-3h16.602c1.1992 0 2.3984 1.1992 2.3984 3v17.199c0 1.8008 1.1992 3.6016 3.6016 3.6016h14.199c3.6016 0 4.1992-1.8008 4.1992-3.6016v-32h7.6992c5.1992 0 7.5977-6.5 4-10.699z" />
+            </svg>
+            Home
+        </a>
+        <!-- <span class="sideBarContent" onclick="PartyMode()">Party Mode</span> -->
+    </div>
+    <!-- <img src="Images/dnd.jpg" class="backgroundImage"> -->
     <div class="container">
         <div class="col">
             <h1>Dice</h1>
             <div class="glass bordered">
-                <div>
-                    <p>Count</p>
-                    <input type="number" id="rollCount" class="numInput" min="1" max="99" value="1">
-                    <div>
-                        <button class="incrementButton" onclick="IncrementRollCount(-1), ValidateCount()"><span
-                                class="red button_top">-</span>
-                        </button>
-                        <button class="incrementButton" onclick="IncrementRollCount(1), ValidateCount()"><span
-                                class="green button_top">+</span>
-                        </button>
+                <div class="container">
+                    <div class="boxes">
+                        <p>Count</p>
+                        <input type="number" id="rollCount" class="numInput" min="1" max="99" value="1">
+                        <div>
+                            <button class="incrementButton" onclick="IncrementRollCount(-1), ValidateCount()"><span
+                                    class="red button_top">-</span>
+                            </button>
+                            <button class="incrementButton" onclick="IncrementRollCount(1), ValidateCount()"><span
+                                    class="green button_top">+</span>
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <p>Modifier</p>
-                    <input type="number" id="modifier" class="numInput" max="99" value="0">
-                    <div>
-                        <button class="incrementButton" onclick="IncrementModifier(-1)"><span
-                                class="red button_top">-</span>
-                        </button>
-                        <button class="incrementButton" onclick="IncrementModifier(1)"><span
-                                class="green button_top">+</span>
-                        </button>
+                    <div class="boxes">
+                        <p>Modifier</p>
+                        <input type="number" id="modifier" class="numInput" max="99" value="0">
+                        <div>
+                            <button class="incrementButton" onclick="IncrementModifier(-1)"><span
+                                    class="red button_top">-</span>
+                            </button>
+                            <button class="incrementButton" onclick="IncrementModifier(1)"><span
+                                    class="green button_top">+</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -54,9 +65,9 @@
                 <button onclick="RollDice(100)"><span class="button_top">d100</span></button>
             </div>
         </div>
-        <div class="col" style="flex-basis: 15%;">
+        <div class="col">
             <h1>Quick rolls</h1>
-            <div class="glass bordered">
+            <div class="boxes glass bordered">
                 <button onclick="RollInitiative()"><span class="button_top">Initiative</span></button>
                 <p>Modifier</p>
                 <input type="number" id="initiativeModifier" class="numInput" value="0">
@@ -76,10 +87,16 @@
         </div>
         <div class="col" style="max-width: 8vw;">
             <h1>Roll history</h1>
-            <button onclick="ClearHistory()"><span class="button_top">Clear</span></button>
+            <button onclick="UpdateHistory(true)"><span class="button_top">Clear</span></button>
             <div id="rollHistory"></div>
         </div>
     </div>
+    <!-- <div class="container">
+        <div class="col">
+            <h1>Spell Tracker</h1>
+            Add later
+        </div>
+    </div> -->
 </body>
 
 </html>

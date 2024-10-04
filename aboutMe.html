@@ -4,15 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="newStyles.css">
-    <script defer src="newScripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
     <title>About Me - nounontoi</title>
 </head>
 
 <body>
-    <a href="index.html" class="topButton">Home</a>
-    <h1 id="title">About Me</h1>
-    <ul>
-        <li>I enjoy speedcubing <br> Best single: 18.75s <br> Best AO5: 23.71s</li>
-    </ul>
+    <span class="sideBarToggle" onclick="ToggleSideBar()">☰</span>
+    <div id="sideBar">
+        <a class="container" href="index.html">
+            <svg class="sideBarIcon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0"> <path d="m95.801 50.301-42.102-45.102c-1.8008-2.3984-5.3008-2.3984-7.1016 0l-42.797 46.301c-3 3.5-0.60156 9.5 4.1992 9.5h9.5v32c0 1.1992 1.1992 3.6016 3.6016 3.6016h15.398c1.8008 0 3.6016-1.8008 3.6016-3.6016v-17.199c0-1.8008 1.1992-3 3-3h16.602c1.1992 0 2.3984 1.1992 2.3984 3v17.199c0 1.8008 1.1992 3.6016 3.6016 3.6016h14.199c3.6016 0 4.1992-1.8008 4.1992-3.6016v-32h7.6992c5.1992 0 7.5977-6.5 4-10.699z" />
+            </svg>
+            Home
+        </a>
+    </div>
+    <article>
+        <h1>About Me</h1>
+        <h2>What I like</h2>
+        <ul>
+            <li>Speedcubing <br> Best single: 18.75s <br> Best AO5: 23.71s</li>
+            <li>Basketball</li>
+        </ul>
+    </article>
 </body>
